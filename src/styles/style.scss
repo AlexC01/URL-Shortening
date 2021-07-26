@@ -99,8 +99,13 @@ nav{
                     background-color: hsl(180, 66%, 71%);
                 }
             }
+
         }
     }
+}
+
+#button_copied{
+    background-color: $verydark_violet;
 }
 
 section{
@@ -188,10 +193,18 @@ section{
                         background-color: $primary_cyan;
                         color: white;
                         border-radius: 5px;
+                        cursor: pointer;
+                        transition-delay: -1s;
+
+                        &:hover{
+                            background-color: hsl(180, 66%, 71%);
+                        }
+
                     }
                 }
             }
         }
+        
 
         .advance_stats{
 

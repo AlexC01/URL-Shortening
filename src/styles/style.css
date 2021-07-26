@@ -123,6 +123,10 @@ nav ul .signup:hover {
   background-color: #84e6e6;
 }
 
+#button_copied {
+  background-color: #232127;
+}
+
 section {
   background-color: #f0f1f6;
 }
@@ -237,6 +241,13 @@ section .section__container .urls .urls__container div button {
   background-color: #2acfcf;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition-delay: -1s;
+          transition-delay: -1s;
+}
+
+section .section__container .urls .urls__container div button:hover {
+  background-color: #84e6e6;
 }
 
 section .section__container .advance_stats .title {
