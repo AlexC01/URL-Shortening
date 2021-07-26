@@ -200,6 +200,16 @@ section .section__container .urls {
       flex-wrap: wrap;
 }
 
+section .section__container .urls .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #2acfcf;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
 section .section__container .urls .urls__container {
   background-color: white;
   padding: 20px;
@@ -244,6 +254,8 @@ section .section__container .urls .urls__container div button {
   cursor: pointer;
   -webkit-transition-delay: -1s;
           transition-delay: -1s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 section .section__container .urls .urls__container div button:hover {
@@ -394,6 +406,28 @@ section .boost div button {
 
 section .boost div button:hover {
   background-color: #84e6e6;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 footer {

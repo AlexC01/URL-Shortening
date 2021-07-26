@@ -1,5 +1,6 @@
 const form = document.querySelector('.form_url');
 const link = document.getElementById('link');
+let loader = document.createElement('div');
 let divurls = document.querySelector('.urls');
 let urls = [];
 
@@ -7,6 +8,8 @@ const short_url = async e =>{
     e.preventDefault();
     try{
         if(link.value){
+            loader.classList.add('loader');
+            divurls.appendChild(loader);
             const api = `https://api.shrtco.de/v2/shorten?url=${link.value}`;
             const pet = await fetch(api);
             const resp = await pet.json();
@@ -19,6 +22,7 @@ const short_url = async e =>{
 }
 
 const showurls = () => {
+    divurls.removeChild(loader);
     divurls.innerHTML = "";
     for(let i in urls){
         divurls.innerHTML += `

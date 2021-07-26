@@ -161,6 +161,15 @@ section{
             flex-direction: row;
             flex-wrap: wrap;
 
+            .loader{
+                border: 16px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 16px solid $primary_cyan;
+                width: 120px;
+                height: 120px;
+                animation: spin 2s linear infinite;
+            }
+
             .urls__container{
                 background-color: white;
                 padding: 20px;
@@ -195,6 +204,7 @@ section{
                         border-radius: 5px;
                         cursor: pointer;
                         transition-delay: -1s;
+                        box-sizing: border-box;
 
                         &:hover{
                             background-color: hsl(180, 66%, 71%);
@@ -326,6 +336,11 @@ section{
         }
     }
 }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 footer{
     background-color: $verydark_violet;
