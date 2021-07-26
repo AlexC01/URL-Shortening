@@ -41,8 +41,11 @@
     <div class="section__container">
       <div class="div_form">
         <form class="form_url">
-          <input type="url" name="link" id="link" placeholder="Shorten a link here...">
-          <input type="submit" value="Shorten it!" class="submit">
+          <div class="form__container">
+            <input type="url" name="link" id="link" class="link_input" placeholder="Shorten a link here...">
+            <input type="submit" value="Shorten it!" class="submit">
+          </div>
+          <span class="error_text"></span>
         </form>
       </div>
       <div class="urls"></div>

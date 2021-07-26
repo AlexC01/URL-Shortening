@@ -1,5 +1,6 @@
 const form = document.querySelector('.form_url');
 const link = document.getElementById('link');
+const errorText = document.querySelector('.error_text');
 let loader = document.createElement('div');
 let divurls = document.querySelector('.urls');
 let urls = [];
@@ -8,6 +9,8 @@ const short_url = async e =>{
     e.preventDefault();
     try{
         if(link.value){
+            link.classList.remove('error');
+            errorText.textContent = '';
             loader.classList.add('loader');
             divurls.appendChild(loader);
             const api = `https://api.shrtco.de/v2/shorten?url=${link.value}`;
@@ -16,6 +19,9 @@ const short_url = async e =>{
             urls.push({'link': link.value, 'short_link': resp.result['full_short_link']});
             form.reset();
             showurls();
+        }else{
+            link.classList.add('error');
+            errorText.textContent = 'Please add a link';
         }
     }catch(err){console.log(err)}
 

@@ -149,24 +149,57 @@ section .section__container .div_form {
 
 section .section__container .div_form form {
   background: #3b3054 url(../images/bg-shorten-desktop.svg);
-  padding: 40px;
+  padding: 40px 40px 30px 40px;
   width: 100%;
   margin-top: -50px;
+  border-radius: 8px;
+}
+
+section .section__container .div_form form .form__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 8px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-section .section__container .div_form form #link {
+section .section__container .div_form form .link_input {
   padding: 12px;
   border-radius: 8px;
   outline: none;
   border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 81%;
+}
+
+section .section__container .div_form form .error {
+  border: 2px solid #f46262;
+  padding: 10px;
+}
+
+section .section__container .div_form form .error::-webkit-input-placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error:-ms-input-placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error::-ms-input-placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error::placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error_text {
+  color: #f46262;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 section .section__container .div_form form .submit {

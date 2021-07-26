@@ -122,19 +122,38 @@ section{
            
             form{
                 background: $primary_darkviolet url(../images/bg-shorten-desktop.svg);
-                padding: 40px;
+                padding: 40px 40px 30px 40px;
                 width: 100%;
                 margin-top: -50px;
-                display: flex;
                 border-radius: 8px;
-                justify-content: space-between;
 
-                #link{
+                .form__container{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .link_input{
                     padding: 12px;
                     border-radius: 8px;
                     outline: none;
                     border: none;
+                    box-sizing: border-box;
                     width: 81%;
+                }
+
+                .error{
+                    border: 2px solid $secondary_red;
+                    padding: 10px;
+                    
+                    &::placeholder{
+                        color: $secondary_red;
+                    }
+                }
+
+                .error_text{
+                   color: $secondary_red;
+                   font-style: italic;
+                   font-size: 12px;
+                   font-weight: lighter;
                 }
 
                 .submit{
@@ -341,6 +360,7 @@ section{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
 
 footer{
     background-color: $verydark_violet;
