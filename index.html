@@ -1,85 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="src/styles/style.css">
+  <title>URL shortening API</title>
 </head>
+
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li class="title_nav">Shortly</li>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Resources</li>
+      </ul>
+      <ul>
+        <li>Login</li>
+        <li class="signup">Sign Up</li>
+      </ul>
+    </nav>
 
-  Features
-  Pricing
-  Resources
+    <div class="header__container">
+      <div>
+        <div>
+          <h1>More than just shorter links</h1>
+          <p>Build your brand's recognition and get detailed insights on how your links are performing</p>
+          <button>Get Started</button>
+        </div>
+      </div>
+      <div>
+        <img src="src/images/illustration-working.svg" alt="Illustration Working">
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="section__container">
+      <div class="div_form">
+        <form class="form_url">
+          <input type="url" name="link" id="link" placeholder="Shorten a link here...">
+          <input type="submit" value="Shorten it!" class="submit">
+        </form>
+      </div>
+      <div class="urls">
+      </div>
+      <div class="advance_stats">
+        <div class="title">
+          <h1>Advanced Statistics</h1>
+          <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+        </div>
+        <div class="three_blocks">
+          <div class="brand">
+            <div class="icon">
+              <img src="src/images/icon-brand-recognition.svg" alt="Brand Recognition" width="30" height="30">
+            </div>
+            <div>
+              <h3>Brand Recognition</h3>
+              <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.</p>
+            </div>
+          </div>
+          <div class="detailed">
+            <div class="icon">
+              <img src="src/images/icon-detailed-records.svg" alt="Detailed Records" width="30" height="30">
+            </div>
+            <div>
+              <h3>Detailed Records</h3>
+              <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+            </div>
+          </div>
+          <div class="fully">
+            <div class="icon">
+              <img src="src/images/icon-fully-customizable.svg" alt="Fully Customizable" width="30" height="30">
+            </div>
+            <div>
+              <h3>Fully Customizable</h3>
+              <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  Login
-  Sign Up
-
-  More than just shorter links
-
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
-
-  Get Started
-  
-  Shorten a link here...
-
-  Shorten It!
-
-  Advanced Statistics
-
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
-
-  Brand Recognition
-
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
-
-  Detailed Records
-
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
-
-  Fully Customizable
-
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
-
-  Boost your links today
-
-  Get Started
-
-  Features
-
-  Link Shortening
-  Branded Links
-  Analytics
-
-  Resources
-
-  Blog
-  Developers
-  Support
-
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="src/js/script.js"></script>
 </body>
+
 </html>
