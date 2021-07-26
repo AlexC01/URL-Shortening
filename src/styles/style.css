@@ -26,18 +26,18 @@ nav {
   width: 70%;
 }
 
-ul {
+nav ul {
   list-style-type: none;
   margin-top: 25px;
 }
 
-ul .title_nav {
+nav ul .title_nav {
   font-size: 25px;
   font-weight: bold;
   color: #35323e;
 }
 
-ul li {
+nav ul li {
   display: inline-block;
   font-size: 14px;
   color: #bfbfbf;
@@ -46,16 +46,21 @@ ul li {
   cursor: pointer;
 }
 
-ul li:hover {
+nav ul li:hover {
   color: #35323e;
 }
 
-ul .signup {
+nav ul .signup {
   background-color: #2acfcf;
   padding: 8px 20px;
   border-radius: 30px;
   color: white;
   cursor: pointer;
+}
+
+nav ul .signup:hover {
+  background-color: #84e6e6;
+  color: white;
 }
 
 .header__container {
@@ -104,8 +109,9 @@ ul .signup {
 
 .header__container div:first-child div button {
   margin-top: 25px;
-  padding: 8px 20px;
+  padding: 8px 25px;
   border-radius: 30px;
+  font-size: 16px;
   color: white;
   font-weight: bold;
   background-color: #2acfcf;
@@ -113,9 +119,16 @@ ul .signup {
   cursor: pointer;
 }
 
+.header__container div:first-child div button:hover {
+  background-color: #84e6e6;
+}
+
+#button_copied {
+  background-color: #232127;
+}
+
 section {
   background-color: #f0f1f6;
-  padding-bottom: 200px;
 }
 
 section .section__container {
@@ -136,24 +149,57 @@ section .section__container .div_form {
 
 section .section__container .div_form form {
   background: #3b3054 url(../images/bg-shorten-desktop.svg);
-  padding: 40px;
+  padding: 40px 40px 30px 40px;
   width: 100%;
   margin-top: -50px;
+  border-radius: 8px;
+}
+
+section .section__container .div_form form .form__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 8px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-section .section__container .div_form form #link {
+section .section__container .div_form form .link_input {
   padding: 12px;
   border-radius: 8px;
   outline: none;
   border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 81%;
+}
+
+section .section__container .div_form form .error {
+  border: 2px solid #f46262;
+  padding: 10px;
+}
+
+section .section__container .div_form form .error::-webkit-input-placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error:-ms-input-placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error::-ms-input-placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error::placeholder {
+  color: #f46262;
+}
+
+section .section__container .div_form form .error_text {
+  color: #f46262;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 section .section__container .div_form form .submit {
@@ -164,6 +210,11 @@ section .section__container .div_form form .submit {
   color: white;
   border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+section .section__container .div_form form .submit:hover {
+  background-color: #84e6e6;
 }
 
 section .section__container .urls {
@@ -182,6 +233,16 @@ section .section__container .urls {
       flex-wrap: wrap;
 }
 
+section .section__container .urls .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #2acfcf;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
 section .section__container .urls .urls__container {
   background-color: white;
   padding: 20px;
@@ -194,6 +255,8 @@ section .section__container .urls .urls__container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 section .section__container .urls .urls__container .link_arr {
@@ -221,6 +284,15 @@ section .section__container .urls .urls__container div button {
   background-color: #2acfcf;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition-delay: -1s;
+          transition-delay: -1s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section .section__container .urls .urls__container div button:hover {
+  background-color: #84e6e6;
 }
 
 section .section__container .advance_stats .title {
@@ -257,6 +329,9 @@ section .section__container .advance_stats .three_blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 
@@ -269,6 +344,7 @@ section .section__container .advance_stats .three_blocks div {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  z-index: 5;
 }
 
 section .section__container .advance_stats .three_blocks h3 {
@@ -311,5 +387,165 @@ section .section__container .advance_stats .three_blocks .icon {
   right: 0;
   bottom: 0;
   z-index: 10;
+}
+
+section .section__container .advance_stats .three_blocks .line_green {
+  display: block;
+  background: #2acfcf;
+  height: 0.5rem;
+  width: 70%;
+  position: absolute;
+  top: 9rem;
+  left: 1rem;
+}
+
+section .boost {
+  padding: 50px 0;
+  margin-top: 70px;
+  background: #3b3054 url(../images/bg-boost-desktop.svg);
+}
+
+section .boost div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .boost div h1 {
+  color: white;
+  font-size: 32px;
+}
+
+section .boost div button {
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 8px 25px;
+  background-color: #2acfcf;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+section .boost div button:hover {
+  background-color: #84e6e6;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+footer {
+  background-color: #232127;
+}
+
+footer .footer_container {
+  padding: 40px 15px 50px 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+}
+
+footer .footer_container div {
+  margin: 0 15px;
+}
+
+footer .footer_container div h1 {
+  color: white;
+}
+
+footer .footer_container .footer__three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+footer .footer_container .footer__three div {
+  margin: 0 45px;
+}
+
+footer .footer_container .footer__three div h4 {
+  color: white;
+  font-size: 15px;
+}
+
+footer .footer_container .footer__three div ul {
+  list-style: none;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #bfbfbf;
+}
+
+footer .footer_container .footer__three div ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+footer .footer_container .footer__three div ul li:hover {
+  color: #2acfcf;
+}
+
+footer .footer_container .social_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+footer .footer_container .social_icons div {
+  cursor: pointer;
+}
+
+footer .footer_container .social_icons .fb:hover path {
+  fill: #2acfcf;
+}
+
+footer .footer_container .social_icons .tw:hover path {
+  fill: #2acfcf;
+}
+
+footer .footer_container .social_icons .pt:hover path {
+  fill: #2acfcf;
+}
+
+footer .footer_container .social_icons .ig:hover path {
+  fill: #2acfcf;
 }
 /*# sourceMappingURL=style.css.map */
