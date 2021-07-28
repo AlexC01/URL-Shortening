@@ -5,6 +5,15 @@ let loader = document.createElement('div');
 let divurls = document.querySelector('.urls');
 let urls = [];
 
+const navbar = () => {
+    let x = document.getElementById("Nav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+
 const short_url = async e =>{
     e.preventDefault();
     try{
@@ -34,6 +43,7 @@ const showurls = () => {
         divurls.innerHTML += `
         <div class="urls__container">
           <p class="link_arr">${urls[i]['link']}</p>
+          <div class="linea"></div>
           <div>
             <p class="short__link">${urls[i]['short_link']}</p>
             <button class="copy_button" onclick="copyClip(${i})">Copy</button>
