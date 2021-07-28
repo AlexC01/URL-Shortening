@@ -3,7 +3,7 @@
 
 ## Description
 
-This a landing page with a API for shortening urls, this is the functionality of the page:
+This a landing page with an API for shortening urls, this is the functionality of the page:
 
 - Shorten any valid URL
 - See a list of their shortened links, even after refreshing the browser
