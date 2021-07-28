@@ -26,6 +26,10 @@ nav {
   width: 70%;
 }
 
+nav .title_nav_responsive {
+  display: none;
+}
+
 nav ul {
   list-style-type: none;
   margin-top: 25px;
@@ -35,6 +39,10 @@ nav ul .title_nav {
   font-size: 25px;
   font-weight: bold;
   color: #35323e;
+}
+
+nav ul .login_r, nav ul .signup_r {
+  display: none;
 }
 
 nav ul li {
@@ -63,6 +71,10 @@ nav ul .signup:hover {
   color: white;
 }
 
+nav .icon {
+  display: none;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,7 +86,6 @@ nav ul .signup:hover {
 }
 
 .header__container div:first-child {
-  width: 60%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -208,7 +219,7 @@ section .section__container .div_form form .submit {
   outline: none;
   background-color: #2acfcf;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -379,6 +390,7 @@ section .section__container .advance_stats .three_blocks .icon {
           align-items: center;
   background: #3b3054;
   border-radius: 50%;
+  padding: 8px 1px;
   width: 60px;
   height: 40px;
   position: absolute;
@@ -397,6 +409,10 @@ section .section__container .advance_stats .three_blocks .line_green {
   position: absolute;
   top: 9rem;
   left: 1rem;
+}
+
+section .section__container .advance_stats .three_blocks .line_green_second {
+  display: none;
 }
 
 section .boost {
@@ -547,5 +563,279 @@ footer .footer_container .social_icons .pt:hover path {
 
 footer .footer_container .social_icons .ig:hover path {
   fill: #2acfcf;
+}
+
+@media only screen and (max-width: 375px) {
+  nav {
+    width: 100%;
+    padding: 0;
+  }
+  nav .title_nav_responsive {
+    margin-top: 25px;
+    margin-left: 20px;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #35323e;
+  }
+  nav ul li {
+    display: none;
+  }
+  nav .icon {
+    display: block;
+    margin-top: 30px;
+    padding-right: 10px;
+  }
+  .nav.responsive {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+  .nav.responsive ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #3b3054;
+    margin: 20px 40px;
+    padding: 10px 10px 30px;
+    border-radius: 8px;
+    position: absolute;
+  }
+  .nav.responsive ul .title_nav {
+    display: none;
+  }
+  .nav.responsive ul li {
+    display: block;
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+  }
+  .nav.responsive ul li:nth-child(5) {
+    border-bottom: 1px solid #bfbfbf;
+    width: 90%;
+  }
+  .nav.responsive ul li:last-child {
+    padding: 10px 80px;
+  }
+  .nav.responsive .segun {
+    display: none;
+  }
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header__container div:first-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .header__container div:first-child div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin-right: 0;
+  }
+  .header__container div:first-child div h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+  .header__container div:last-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 10px;
+  }
+  .header__container div:last-child img {
+    width: 100%;
+  }
+  section {
+    margin-top: 120px;
+  }
+  section .section__container {
+    width: 100%;
+    padding: 0;
+  }
+  section .section__container .div_form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 15px;
+  }
+  section .section__container .div_form form {
+    background: #3b3054 url(../images/bg-shorten-mobile.svg);
+    padding: 25px;
+  }
+  section .section__container .div_form form .form__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section .section__container .div_form form .link_input {
+    width: 100%;
+  }
+  section .section__container .div_form form .submit {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 30px;
+  }
+  section .section__container .urls {
+    margin: 30px 0;
+    padding: 0 30px;
+  }
+  section .section__container .urls .urls__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+  }
+  section .section__container .urls .urls__container .link_arr {
+    width: 100%;
+    font-size: 15px;
+    padding: 20px 20px 0 20px;
+  }
+  section .section__container .urls .urls__container .linea {
+    border-bottom: 1px solid #bfbfbf;
+    width: 100%;
+  }
+  section .section__container .urls .urls__container div {
+    padding: 20px 20px 20px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  section .section__container .urls .urls__container div p {
+    margin-right: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+  }
+  section .section__container .urls .urls__container div button {
+    padding: 8px 30px;
+    font-weight: bold;
+  }
+  section .section__container .advance_stats .title {
+    padding: 0 25px;
+  }
+  section .section__container .advance_stats .title h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  section .section__container .advance_stats .title p {
+    width: 100%;
+    font-weight: normal;
+  }
+  section .section__container .advance_stats .three_blocks {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px;
+  }
+  section .section__container .advance_stats .three_blocks h3 {
+    text-align: center;
+  }
+  section .section__container .advance_stats .three_blocks p {
+    text-align: center;
+  }
+  section .section__container .advance_stats .three_blocks .detailed {
+    margin-top: 80px;
+  }
+  section .section__container .advance_stats .three_blocks .fully {
+    margin-top: 80px;
+  }
+  section .section__container .advance_stats .three_blocks .icon {
+    margin: 0 auto;
+  }
+  section .section__container .advance_stats .three_blocks .line_green {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 40rem;
+    width: 80%;
+    left: 2.4rem;
+  }
+  section .section__container .advance_stats .three_blocks .line_green_second {
+    display: block;
+    background: #2acfcf;
+    position: absolute;
+    height: 0.5rem;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 20rem;
+    width: 80%;
+    left: 2.4rem;
+  }
+  section .boost {
+    background: #3b3054 url(../images/bg-boost-mobile.svg);
+    padding: 50px 20px;
+  }
+  section .boost div h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  section .boost div button {
+    padding: 12px 40px;
+  }
+  footer .footer_container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer_container div h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  footer .footer_container .footer__three {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer_container .footer__three div {
+    margin: 0;
+  }
+  footer .footer_container .footer__three div h4 {
+    text-align: center;
+  }
+  footer .footer_container .footer__three div ul {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header__container div:first-child {
+    width: 60%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
