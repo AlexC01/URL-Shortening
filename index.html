@@ -4,24 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" href="src/images/enlace.png">
   <link rel="stylesheet" href="src/styles/style.css">
   <title>URL shortening API</title>
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="nav" id="Nav">
+      <li class="title_nav_responsive">Shortly</li>
       <ul>
         <li class="title_nav">Shortly</li>
         <li>Features</li>
         <li>Pricing</li>
         <li>Resources</li>
+        <li></li>
+        <li class="login_r">Login</li>
+        <li class="signup signup_r">Sign Up</li>
       </ul>
-      <ul>
+      <ul class="segun">
         <li>Login</li>
         <li class="signup">Sign Up</li>
       </ul>
+      <div class="icon">
+        <a href="#" onclick="navbar()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" fill="currentColor">
+          <path fill="	#808080" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </svg></a>
+      </div>
     </nav>
 
     <div class="header__container">
@@ -64,6 +73,7 @@
               <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content.</p>
             </div>
           </div>
+          <span class="line_green_second"></span>
           <span class="line_green"></span>
           <div class="detailed">
             <div class="icon">

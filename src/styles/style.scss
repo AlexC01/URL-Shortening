@@ -18,6 +18,11 @@ nav{
     padding: 0 15px;
     margin: 0 auto;
     width: 70%;
+
+    .title_nav_responsive{
+        display: none;
+    }
+
     ul{
         list-style-type: none;  
         margin-top: 25px;  
@@ -25,6 +30,10 @@ nav{
             font-size: 25px;
             font-weight: bold;
             color: $verydark_blue;
+        }
+
+        .login_r, .signup_r{
+            display: none;
         }
 
         li{
@@ -53,6 +62,10 @@ nav{
             }
         }
     }
+
+    .icon{
+        display: none;
+    }
 }
 
 
@@ -62,7 +75,6 @@ nav{
     margin-top: 40px;
 
     div:first-child{    
-        width: 60%;
         margin: 0 auto;
         padding: 0 15px;
         
@@ -162,7 +174,7 @@ section{
                     outline: none;
                     background-color: $primary_cyan;
                     color: white;
-                    border-radius: 8px;
+                    border-radius: 5px;
                     font-weight: bold;
                     cursor: pointer;
 
@@ -299,6 +311,7 @@ section{
                     align-items: center;
                     background: $primary_darkviolet;
                     border-radius: 50%;
+                    padding: 8px 1px;
                     width: 60px;
                     height: 40px;
                     position: absolute;
@@ -317,6 +330,9 @@ section{
                     position: absolute;
                     top: 9rem;
                     left: 1rem;
+                }
+                .line_green_second{
+                    display: none;
                 }
             }
         }
@@ -433,5 +449,288 @@ footer{
             }
         }
         
+    }
+}
+
+@media only screen and (max-width:375px){
+    nav{
+        width: 100%;
+        padding: 0;
+
+        .title_nav_responsive{
+            margin-top: 25px;
+            margin-left: 20px;
+            display: block;
+            font-size: 25px;
+            font-weight: bold;
+            color: $verydark_blue;
+        }
+        ul{
+            li{
+                display: none;
+            }
+        }
+
+        .icon{
+            display: block;
+            margin-top: 30px;
+            padding-right: 10px;
+        }
+    }
+
+    .nav.responsive{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+
+        ul{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            background-color: $primary_darkviolet;
+            margin: 20px 40px;
+            padding: 10px 10px 30px;
+            border-radius: 8px;
+            position: absolute;
+
+            .title_nav{
+                display: none;
+            }
+            li{
+                display: block;
+                font-size: 16px;
+                color: white;
+                margin-top: 20px;
+            }
+
+            li:nth-child(5){
+                border-bottom: 1px solid $neutral_gray;
+                width: 90%;
+            }
+
+            li:last-child{
+                padding: 10px 80px;
+            }
+        }
+        .segun{
+            display: none;
+        }
+
+        .icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .header__container{
+        flex-wrap: wrap;
+        
+        div:first-child{
+            order: 2;
+            div{
+                align-items: center;
+                text-align: center;
+                margin-right: 0;
+
+                h1{
+                    font-size: 2.2em;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        div:last-child{
+            order: 1;
+            padding: 10px;
+            img{
+                width: 100%;                
+            }
+        }
+    }
+
+    section{
+        margin-top: 120px;
+
+        .section__container{
+            width: 100%;
+            padding: 0;
+
+            .div_form{
+                align-items: center;
+                padding: 0 15px;
+
+                form{
+                    background: $primary_darkviolet url(../images/bg-shorten-mobile.svg);
+                    padding: 25px;
+                    
+                    .form__container{
+                        justify-content: center;
+                        flex-wrap: wrap;
+                    }
+
+                    .link_input{
+                        width: 100%;
+                    }
+
+                    .submit{
+                        margin-top: 15px;
+                        width: 100%;
+                        padding: 10px 30px;
+                    }
+                }
+            }
+
+            .urls{
+                margin: 30px 0;
+                padding: 0 30px;
+
+                .urls__container{
+                    flex-wrap: wrap;
+                    padding: 0;
+                    .link_arr{
+                        width: 100%;
+                        font-size: 15px;
+                        padding: 20px 20px 0 20px;
+                    }
+                    .linea{
+                        border-bottom: 1px solid $neutral_gray;
+                        width: 100%;
+                    }
+                    div{
+                        padding: 20px 20px 20px 20px;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        width: 100%;
+
+                        p{
+                            margin-right: 0;
+                            margin-bottom: 15px;
+                            font-size: 15px;
+                        }
+                        button{
+                            padding: 8px 30px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .advance_stats{
+                .title{
+                    padding: 0 25px;
+
+                    h1{
+                        font-size: 28px;
+                        text-align: center;
+                    }
+
+                    p{
+                        width: 100%;
+                        font-weight: normal;
+                    }
+                }
+                .three_blocks{
+                    flex-wrap: wrap;
+                    padding: 20px;
+                    
+                    h3{
+                        text-align: center;
+                    }
+
+                    p{
+                        text-align: center;
+                    }
+
+                    .detailed{
+                        margin-top: 80px;
+                    }
+
+                    .fully{
+                        margin-top: 80px;
+                    }
+
+                    .icon{
+                        margin: 0 auto;
+                    }
+
+                    .line_green{
+                        transform: rotate(90deg);
+                        top: 40rem;
+                        width: 80%;
+                        left: 2.4rem;
+                    }
+                    .line_green_second{
+                        display: block;
+                        background: $primary_cyan;
+                        position: absolute;
+                        height: 0.5rem;
+                        transform: rotate(90deg);
+                        top: 20rem;
+                        width: 80%;
+                        left: 2.4rem;
+                    }
+                }
+            }
+        }
+
+        .boost{
+            background: $primary_darkviolet url(../images/bg-boost-mobile.svg);
+            padding: 50px 20px;
+
+            div{
+                h1{
+                    font-size: 28px;
+                    text-align: center;
+                }
+
+                button{
+                    padding: 12px 40px;
+                }
+            }
+        }
+    }
+
+    footer{
+
+        .footer_container{
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            div{
+                h1{
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .footer__three{
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                div{
+                    margin: 0;
+
+                    h4{
+                        text-align: center;
+                    }
+
+                    ul{
+                        margin-bottom: 35px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+@media only screen and (min-width:1024px){
+    .header__container{
+        div:first-child{
+            width: 60%;
+        }
     }
 }
